@@ -5,4 +5,4 @@ chrome.runtime.onInstalled.addListener (details) ->
 
 chrome.browserAction.setBadgeText({text: '\'Allo'})
 
-console.log('\'Allo \'Allo! Event Page for Browser Action')
+console.log('\'Allo \'Allo! Event Pa!ge for Browser Action')

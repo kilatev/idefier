@@ -1,6 +1,6 @@
 {
     "name": "__MSG_appName__",
-    "version": "0.0.12",
+    "version": "0.0.26",
     "manifest_version": 2,
     "description": "__MSG_appDescription__",
     "icons": {
@@ -11,7 +11,8 @@
     "background": {
         "scripts": [
             "scripts/chromereload.js",
-            "scripts/background.js"
+            "scripts/background.js",
+            "scripts/content_scripts/idefier.js"
         ]
     },
     "browser_action": {
@@ -25,6 +26,7 @@
     "permissions": [
         "tabs",
         "management",
+        "debugger",
         "http://*/*",
         "https://*/*"
     ],
