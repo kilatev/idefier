@@ -271,6 +271,8 @@ module.exports = function (grunt) {
                         'styles/{,*/}*.css',
                         'styles/fonts/{,*/}*.*',
                         '_locales/{,*/}*.json',
+                        'bower_components/*{,*/}*.js',
+                        'scripts/content_scripts/*.js'
                     ]
                 }]
             }
@@ -348,7 +350,7 @@ module.exports = function (grunt) {
         'concurrent:dist',
         'cssmin',
         'concat',
-        
+
         'copy',
         'usemin',
         'compress'
