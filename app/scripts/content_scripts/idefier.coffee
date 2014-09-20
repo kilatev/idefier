@@ -10,3 +10,4 @@
         chrome.tabs.executeScrip        code:   'document.body.style.backgroundColor="red"'
         d=a+b
         $('h1').text(d)
+        console.log "text "
