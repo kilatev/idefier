@@ -1,5 +1,5 @@
 # http://motyar.blogspot.com/2010/02/get-user-selected-text-with-jquery-and.html
-getSelected = ->
+window.getSelected = ->
   if window.getSelection
     return window.getSelection()
   else if document.getSelection
