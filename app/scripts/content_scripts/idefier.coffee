@@ -1,8 +1,6 @@
-'use strict'
+window.hilitor = new Hilitor("body");
 
-() ->
-    console.log "chacha"
-    chrome.browserAction.onDoubleClicked.addListener (tab)->
-        selection = window.getSelected()
-        text = new String(selection)
-        searchableText = document.all[0].outerHTML
+$('body').on 'mouseup', ->
+    selection = window.Selectors.getSelected()
+    text = selection.toString()
+    window.hilitor.apply(text)

@@ -1,6 +1,6 @@
 {
     "name": "__MSG_appName__",
-    "version": "0.0.43",
+    "version": "0.0.64",
     "manifest_version": 2,
     "description": "__MSG_appDescription__",
     "icons": {
@@ -12,6 +12,7 @@
         "scripts": [
             "scripts/chromereload.js",
             "scripts/background.js",
+            "scripts/content_scripts/hilitor.js",
             "scripts/content_scripts/idefier.js",
             "scripts/content_scripts/selector.js"
         ]
@@ -24,6 +25,10 @@
         "default_title": "y",
         "default_popup": "popup.html"
     },
+    "web_accessible_resources": [
+        "bower_components/jquery/dist/jquery.min.js",
+        "bower_components/jquery/dist/jquery.min.map"
+    ],
     "permissions": [
         "tabs",
         "management",
@@ -34,10 +39,12 @@
     "content_scripts": [
         {
             "matches": [
-                "http://plusit.co/*"
+                "http://*/*",
+                "https://*/*"
             ],
             "js": [
                 "bower_components/jquery/dist/jquery.min.js",
+                "scripts/content_scripts/hilitor.js",
                 "scripts/content_scripts/idefier.js",
                 "scripts/content_scripts/selector.js"
             ],
