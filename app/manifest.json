@@ -1,8 +1,8 @@
 {
     "name": "Idefier",
-    "version": "0.0.67",
+    "version": "0.0.83",
     "manifest_version": 2,
-    "description": "This app makes brower capable of simple code editor stuff",
+    "description": "This app makes browser capable of simple code editor stuff",
     "icons": {
         "16": "images/text-editor.png",
         "128": "images/text-editor.png"
@@ -26,19 +26,26 @@
         "management",
         "debugger",
         "http://*/*",
-        "https://*/*"
+        "https://*/*",
+        "file://*/*"
     ],
     "content_scripts": [
         {
             "matches": [
                 "http://*/*",
-                "https://*/*"
+                "https://*/*",
+                "file://*/*"
             ],
             "js": [
                 "bower_components/jquery/dist/jquery.min.js",
+                "bower_components/codemirror/lib/codemirror.js",
+                "bower_components/codemirror/mode/**/*.js",
                 "scripts/content_scripts/hilitor.js",
                 "scripts/content_scripts/idefier.js",
                 "scripts/content_scripts/selector.js"
+            ],
+            "css": [
+                "bower_components/codemirror/lib/codemirror.css"
             ],
             "run_at": "document_end"
         }
