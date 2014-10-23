@@ -1,11 +1,11 @@
 {
-    "name": "__MSG_appName__",
-    "version": "0.0.64",
+    "name": "Idefier",
+    "version": "0.0.67",
     "manifest_version": 2,
-    "description": "__MSG_appDescription__",
+    "description": "This app makes brower capable of simple code editor stuff",
     "icons": {
-        "16": "images/icon-16.png",
-        "128": "images/icon-128.png"
+        "16": "images/text-editor.png",
+        "128": "images/text-editor.png"
     },
     "default_locale": "en",
     "background": {
@@ -16,14 +16,6 @@
             "scripts/content_scripts/idefier.js",
             "scripts/content_scripts/selector.js"
         ]
-    },
-    "browser_action": {
-        "default_icon": {
-            "19": "images/icon-19.png",
-            "38": "images/icon-38.png"
-        },
-        "default_title": "y",
-        "default_popup": "popup.html"
     },
     "web_accessible_resources": [
         "bower_components/jquery/dist/jquery.min.js",
